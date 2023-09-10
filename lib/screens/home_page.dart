@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/categories_list_view.dart';
-import 'package:news_app/widgets/news_list_view.dart';
-
 import '../widgets/news_list_view_builder.dart';
 
 class HomePage extends StatelessWidget {
@@ -49,20 +47,14 @@ class HomePage extends StatelessWidget {
                   height: 30,
                 ),
               ),
-              NewsListViewBuilder(),
+              NewsListViewBuilder(
+                category: 'general',
+              ),
               // SliverToBoxAdapter(child: NewsListView())
             ],
           ),
-          //child: Column(
-          //  children: [
-          //  CategoriesListView(),
-          //   SizedBox(
-          //     height: 30,
-          //  ),
-          //  Expanded(child: NewsListView()),
-          // ],
-          //  ),
-        ));
+        ),
+    );
   }
 }
 
